@@ -1,0 +1,24 @@
+server:
+  port: 8001
+spring:
+  application:
+    name: marine-config
+  config:
+    import:
+    - configserver:http://localhost:8889
+    
+management:
+  endpoint:
+    refresh:
+      enabled: true
+  endpoints:
+    web:
+      exposure:
+        include:
+        - refresh        
+#eureka:
+#  client:
+#    register-with-eureka: true
+#    fetch-registry: false
+#    service-url: 
+#      defaultZone: http://localhost:8761//eureka

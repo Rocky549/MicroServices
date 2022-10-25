@@ -1,0 +1,11 @@
+server:
+  port: 8006
+spring:
+  main:
+    web-application-type: NONE
+eureka:
+  client:
+    register-with-eureka: false
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:8761/eureka    

@@ -1,0 +1,22 @@
+server:
+  port: 8762
+spring:
+  application:
+    name: iportman-eurekaserver-replica
+  config:
+    import:
+    - configserver:http://localhost:8889/
+  cloud:
+    config:
+      username: Rocky
+      password: Rocky
+management:
+  endpoint:
+    refresh:
+      enabled: true
+  endpoints:
+    web:
+      exposure:
+        include:
+        - refresh       
+   

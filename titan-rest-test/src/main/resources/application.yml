@@ -1,0 +1,25 @@
+server:
+  port: 8888
+  servlet:
+    context-path: /titan
+  
+spring:
+  mvc:
+    pathmatch:
+      matching-strategy: ant-path-matcher
+  datasource:
+    driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+    url: jdbc:sqlserver://192.168.101.20:1433;database=RDB_TEST;schema=dbo
+    username: RDBTEST
+    password: RDB#1842
+  jpa :
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.SQLServer2012Dialect
+        default_schema: dbo
+  

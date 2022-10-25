@@ -1,0 +1,22 @@
+#spring:
+#  cloud:
+#    config:
+#      enabled: true
+#      name: marine-config
+#      uri:
+#      - http://localhost:8889/
+#  config:
+#    import:
+#    - configserver:http://localhost:8889/    
+#    
+#    #instead of adding bootstrap.yml we can add in application.yml it self
+
+
+spring:
+  cloud:
+    config:
+      name: marine-config
+      uri: http://localhost:8889/
+      username: Rocky
+      password: Rocky
+      fail-fast: true

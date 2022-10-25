@@ -1,0 +1,8 @@
+spring:
+  cloud:
+    config:
+      name: generalcargo-config
+      uri: http://localhost:8889/
+      username: Rocky
+      password: Rocky
+      fail-fast: true
